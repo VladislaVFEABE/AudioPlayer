@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "audio_Geng",
+			"path": "..\\..\\..\\audio_Geng"
+		},
+		{
+			"name": "Audio-Main-Web-App(PMR)-Copirlink(SutaMoshRep)",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Audio-Main-Web-App(PMR)-Copirlink(SutaMoshRep)"
+	}
+}

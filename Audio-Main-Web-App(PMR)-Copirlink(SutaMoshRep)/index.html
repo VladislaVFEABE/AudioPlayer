@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Musik Tiraspol MP3</title>
+    <link rel="icon" href="boombox.svg" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/custom_button.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
+    <link rel="stylesheet" href="./assets/css/modal.css">
+    <link rel="stylesheet" href="./assets/css/modal3.css">
+    <link rel="stylesheet" href="./modal-window-destroy-concept/dist/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <div class="menu-side">
+        <a href="#" class="menu-side__logo">
+          <img class="nagatoro" src="https://sun9-west.userapi.com/sun9-14/s/v1/ig2/NTNuOXSyjPZ3bFRRuOgzXohIqLAFVIiIOgVCz1dl5xgHUKqv4lokjEf-zMYOCNPWF6aYLcxr0ssLR0bJe_pFWXgb.jpg?size=736x736&quality=96&type=album" alt="Geng" />
+          
+          <img
+            src="https://media3.giphy.com/media/zNjvrOLwEtvE29UWbG/giphy.gif?cid=ecf05e47whtjuowrc9i2lmahaocxr19173qauun7fj0pug7x&rid=giphy.gif&ct=s"
+            alt="Audio"
+            style="width: 50px"
+          />
+          <i class="bi bi-x-lg"></i>
+        </a>
+        <button class="banner__btn-follow glow-on-hover modal_chat" type="button"><a href="./admins/dist/index.html">Создатели</button></a>
+        <div class="menu-side__playlist">
+          <div class="menu-side__playlist-label">
+            <i class="bi bi-star-fill"></i>
+            Музло выходит  каждую неделю
+          </div>
+          <h4 class="active">
+            <i class="bi bi-music-note-beamed"></i>Новинки
+          </h4>
+          <h4><i class="bi bi-music-note-beamed"></i><a href="http://surl.li/clnlp"  target="_blank">Мой плейлист</h4></a>
+          <h4><i class="bi bi-music-note-beamed"></i>Все треки</h4>
+        </div>
+        <div class="menu-side__song active">
+           <div class="menu-side__song-item active">
+            <div class="menu-side__song-item--number">1</div>
+            <div class="menu-side__song-item--image">
+              <img src="https://sun9-east.userapi.com/sun9-25/s/v1/if2/iWCNkBAdwZ-FmX_RtVKl3wWTlvyYwShl9k3gWptORH5y6XOc_iqhZB3dLFjhtMctP3LZnAmvZm39LADRI2n3c1EX.jpg?size=1440x1428&quality=95&type=album" />
+            </div>
+            <div class="menu-side__song-item--info">
+              <div class="song-item--title">My Divk</div>
+              <div class="song-item--singer">ZODIVK</div>
+            </div>
+            <div class="menu-side__song-item--play">
+              <i class="bi bi-play-circle-fill" id="1"></i>
+            </div>
+          </div> 
+        </div>
+        <div class="menu-side__song us-uk">
+          <h1 style="text-align: center;">Loading data...</h1>
+        </div>
+        <div class="menu-side__song edm">
+          <h1 style="text-align: center;">Loading data...</h1>
+        </div>
+      </div>
+      <div class="song-side">
+        <header class="song-side__heading">
+          <nav class="song-side__heading--left">
+            <ul class="song-side__heading--tabs">
+              <li class="tab-item active">Главное</li>
+              <li class="tab-item">Акаунт</li>
+              
+            </ul>
+            <div class="song-side__heading--search">
+              <div class="mobile__heading--menu">
+                <a href="./admins/dist/index.html">
+                <i class="bi bi-boombox-fill"></i>
+                </a>
+              </div>
+              <div class="mobile__heading--logo">
+                <img class="mobimg" 
+                  src="https://sun9-north.userapi.com/sun9-78/s/v1/ig2/Px9Hx8_5Eobs0p-oZjpkM3sfAfOkwLnpno3P8EZ5S3KYvFXK8yawQd02TilxuUbLWOW3M9qWU9JljB5MTRf3OeHJ.jpg?size=1200x1200&quality=95&type=album" 
+                  alt="Zing MP3">
+              </div>
+              <div class="search__container" action="ac.mp3.zing.vn/complete">
+                <div class="search-btn">
+                  <i class="bi bi-search"></i>
+                </div>
+                <input
+                  class="hide-on-mobile-tablet"
+                  type="text"
+                  name="search-song"
+                  id="search-song"
+                  placeholder="Поиск трека"
+                  spellCheck={false}
+                  autocomplete="off"
+                />
+              </div>
+              
+            </div>
+          </nav>
+          
+          <nav class="song-side__heading--right">
+            <a href="./Form-Reg/dist/index.html">
+            <div class="song-side__heading--user">
+              <img class="mobimg" src="https://sun9-north.userapi.com/sun9-83/s/v1/if2/GN4Pfeg8m1ejR5U15pkp3hrJc4FB_Lp2cpRxZ9baJERjuTiWg7oOBBaamfcXsNPe-0cKdmFBDlSOMlxspkJr2Jpg.jpg?size=1472x1472&quality=95&type=album" alt="Avatar" />
+            </div>
+            </a>
+          </nav>
+        </header>
+        <div class="search__result">
+             <a href="" class="search__result--item">
+              <div class="result__item--img">
+                <img src="https://sun9-west.userapi.com/sun9-7/s/v1/if2/UxS8TmeUZ67r2Tu0UQb8VtqcNwrSTwTEpDh2saHTRum4sfsd_izBF67rNErdjjl52HPPp--dNeuxt8z3I-aGTc2g.jpg?size=1280x1280&quality=95&type=album" alt="Song Image">
+              </div>
+              <div class="result__item--content">
+                <h3 class="content__title">
+                  Frozen
+                </h3>
+                <h4 class="content__subtitle">
+                  Madonna, Sickick
+                </h4>
+              </div>
+            </a> 
+            
+        </div>
+        
+        <div class="song-side__container active">
+          <div class="song-side__banner">
+            <div class="song-side__banner--title">
+              MP3 Tiraspol
+            </div>
+            
+            <div class="song-side__banner--btn">
+             <button   class="btn btn-outline-primary mb-1 banner__btn-follow glow-on-hover open_button"  type="button"><a class="modal_reg" href="./Form-Reg/dist/index.html">Регистрация</button></a>
+            
+             
+            
+            </div>
+            
+          </div>
+          <div class="song-side__playlist">
+            <div class="song-side__playlist--popular">
+              <div class="playlist__popular--title">Популярные треки</div>
+              <div class="playlist__popular--arrow">
+                <i class="bi bi-arrow-left" id="left-scroll-playlist"></i>
+                <i class="bi bi-arrow-right" id="right-scroll-playlist"></i>
+              </div> 
+            </div> 
+            <div class="song-side__playlist--carousel">
+               <a href="#" class="playlist__carousel-item">
+                <div class="playlist__carousel-item--img">
+                  <img src="https://sun9-east.userapi.com/sun9-25/s/v1/if2/JaUmSs1xmR-C7Emm6f8Vjr9Qp2QMlxChBaF2NP7HMbdTxHdMgi1pSQ_8yfxsoO3UtLD4WXx5YE3Gj647FOy_2Hkt.jpg?size=735x496&quality=95&type=album" alt="#" />
+                  <i class="bi bi-play-circle"></i>
+                </div>
+                <div class="playlist__carousel-item--title">
+                  Soap
+                </div>
+                <div class="playlist__carousel-item--subtitle">
+                  Melanie Martinez
+                </div>
+              </a> 
+            </div>
+          </div>
+          <div class="song-side__new-release">
+            <div class="song-side__playlist--popular">
+              <div class="playlist__popular--title">Топ треки и их исполнители</div>
+            </div>
+            <div class="song-side__playlist--carousel">
+              <div class="swiper swiper__new-release">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                  <!-- Slides -->
+                  <div class="song-side__new-release--item swiper-slide">
+                    <div class="song-side__new-release--thumbnail">
+                      <img src="https://sun9-east.userapi.com/sun9-28/s/v1/if2/Te8vkukAZvWiLs--9sn-d5i3HdJN3P_hOx9ntTXE7DNFvLdqtv4xht4Quvf-A9VTPSaKeBC6IJa1qG5qIrQw9osC.jpg?size=1644x924&quality=96&type=album">
+                      <i class="bi bi-play-circle"></i>
+                    </div>
+                    <div class="song-side__new-release--content">
+                      <div class="new-release__info">
+                        <div class="new-release__info--title">Japanese Stutter</div>
+                        <div class="new-release__info--subtitle">Freez feat. Suave Lee</div>
+                      </div>
+                      <div class="new-release__time">
+                        <div class="new-release__time--rank">#1</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="song-side__singer">
+            <div class="song-side__playlist--popular">
+              <div class="playlist__popular--title">Топ исполнители</div>
+              <div class="playlist__popular--arrow">
+                <i class="bi bi-arrow-left" id="left-scroll-singer"></i>
+                <i class="bi bi-arrow-right" id="right-scroll-singer"></i>
+              </div>
+            </div>
+            <div class="song-side__playlist--carousel">
+               <a class="playlist__carousel-item--circle">
+                <div class="carousel-item__circle--img">
+                  <img
+                    src="https://sun9-east.userapi.com/sun9-59/s/v1/ig2/btbGl8RY6KEoBEaBtHgtPRHzkNKAXOfTbvlBUkwUUqk_ibEQsd9QZ6f9efKRX1XpW0cFJ2XlHbEqInALeyeKJ2Ru.jpg?size=736x1029&quality=96&type=album"
+                    alt="#"
+                  />
+                  <i class="bi bi-play-circle"></i>
+                </div>
+              
+              </a> 
+            </div>
+          </div>
+          
+          <div class="song-side__footer">
+            <iframe style="margin-bottom: 1em;" width="460" height="215" src="https://www.youtube.com/embed/DMRMGE-iFlQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe width="460" height="215" src="https://www.youtube.com/embed/vwlulN6OPyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="footer__title" style="margin-top:2em;">
+              <img style="width:100px; border-radius:50px;" src="https://wallpapers-clan.com/wp-content/uploads/2021/04/Anime-App-Icons-Apple-Music.png">
+              <span>Мошой Никита 2022</span>
+            </div>
+           
+          </div>
+        </div>
+        <div class="song-side__container">
+          <div class="song-side__container--personal">
+            <div class="container__personal--heading">
+              <img src="https://lastfm.freetls.fastly.net/i/u/770x0/b71b2575e6f5a60e334377b52be953a5.jpg#b71b2575e6f5a60e334377b52be953a5" alt="Avatar" />
+              <span class="personal__name-user">$uicideboy$</span>
+            </div>
+            <div class="container__personal--wrapper-item active">
+              <div class="container__personal--control">
+                <div class="personal__title--left">
+                  <p>Фонк</p>
+                  <i class="bi bi-chevron-right"></i>
+                </div>
+                <div class="personal__title--right">
+                  <button>
+                    <i class="bi bi-play-fill"></i>
+                   Рандом
+                  </button>
+                </div>
+              </div>
+              <div class="container__personal--song">
+                <div class="personal__song--animate">
+                  <ul class="song__animate-img">
+                    <li class="song__animate-img--item first">
+                      <img
+                        src="https://sun9-north.userapi.com/sun9-84/s/v1/ig2/bFhW1K3oVdHr6SXKvQd933iAHoaDRWtx7KAz6FzxBCJD2q_RBSnBDlTaF6V1wx8qrGc3yWPuhJz3AwQofMl00QKq.jpg?size=564x564&quality=95&type=album"
+                        alt=""
+                      />
+                    </li>
+                    <li class="song__animate-img--item second">
+                      <img
+                        src="https://sun9-north.userapi.com/sun9-83/s/v1/ig2/OGH8EmtavY9scVfacoLRG2_EIQ6RRj_plJKAon8nf233h06w4zJkwyClieT7J9lXwoI-LNggtvrV4QRmmnIvifo8.jpg?size=1080x1080&quality=95&type=album"
+                        alt=""
+                      />
+                    </li>
+                    <li class="song__animate-img--item third">
+                      <img
+                        src="https://sun9-west.userapi.com/sun9-52/s/v1/ig2/Bxae2p7y9SdNLO82acFTAhpT2fd9RmsHcCNPqWPJD3JAMv_HB4YwpeqJmhcJs-paDLtZP-7pTpUEujGuS3SrtcVN.jpg?size=720x714&quality=95&type=album"
+                        alt=""
+                      />
+                    </li>
+                    <li class="song__animate-img--item third">
+                      <img
+                        src="https://sun9-west.userapi.com/sun9-68/s/v1/ig2/TKW_JGA2CZ8fjXSuKoZFrbcviuJq4LUQYJTADXm-8jNQApQBtMF-0fos9lZpJvH5h3Pfe2kfYyRQZoWDC2udvMZX.jpg?size=1080x1080&quality=95&type=album"
+                        alt=""
+                      />
+                    </li>
+                    <li class="song__animate-img--item third">
+                      <img
+                        src="https://sun9-west.userapi.com/sun9-16/s/v1/ig2/aI1KVLEk97PzteNhjpmD5f7M7Vn6ZRoMorzhH7nU3P6-65PD6Bb0HBQe1jLFCZ8EO_Zgz25df4cx37nxf1IR6JcB.jpg?size=1080x1352&quality=96&type=album"
+                        alt=""
+                      />
+                    </li>
+                    <li class="song__animate-img--item third">
+                      <img
+                        src="https://sun9-west.userapi.com/sun9-37/s/v1/ig2/p71VyVKOXfUaOneMnQz_iJ6gR8cMmceqQD6JToDVp751Te34Zr8eoXYISrY49JD8GDtcdhACC6I-jyVuO8n_FGeU.jpg?size=1080x1352&quality=96&type=album"
+                        alt=""
+                      />
+                    </li>
+                  </ul>
+                </div>
+                <div class="personal__song--list">
+                   <div class="personal__song--list-item active">
+                    <div class="song__list-item--left">
+                      <i class="bi bi-music-note-beamed"></i>
+                      <div class="song__list-item--left-thumbnail">
+                        <div class="music-play__wave active">
+                          <div class="music-play__wave-item"></div>
+                          <div class="music-play__wave-item"></div>
+                          <div class="music-play__wave-item"></div>
+                        </div>
+                        <img src="https://sun9-west.userapi.com/sun9-37/s/v1/ig2/p71VyVKOXfUaOneMnQz_iJ6gR8cMmceqQD6JToDVp751Te34Zr8eoXYISrY49JD8GDtcdhACC6I-jyVuO8n_FGeU.jpg?size=1080x1352&quality=96&type=album" alt="#" />
+                      </div>
+                      <div class="list-item__left--card-info">
+                        <span class="card-info__title">Playa</span>
+                        <span class="card-info__subtitle">Town</span>
+                      </div>
+                    </div>
+                    <div class="song__list-item--content">
+                      <span>Phonk</span>
+                    </div>
+                    <div class="song__list-item--right">
+                      <span>02:23</span>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+            </div>
+            <div class="container__personal--wrapper-item active">
+              <div class="container__personal--control">
+                <div class="personal__title--left">
+                  <p>Плейлист</a>
+                  <i class="bi bi-chevron-right"></i>
+                </div>
+                <div class="personal__title--right">
+                  <div class="playlist__popular--arrow playlist-personal">
+                    
+                    <i class="bi bi-arrow-left"></i>
+                    <i class="bi bi-arrow-right"></i>
+                    
+                  </div>
+                  
+                </div>
+                
+              </div>
+              
+              <div class="song-side__playlist--carousel playlist"> 
+              </div>
+            </div>
+            <div class="container__personal--wrapper-item active">
+              <div class="container__personal--control">
+                <div class="personal__title--left">
+                  <span>Альбом</span>
+                  <i class="bi bi-chevron-right"></i>
+                </div>
+                <div class="personal__title--right">
+                  <div class="playlist__popular--arrow album-personal">
+                    <i class="bi bi-arrow-left"></i>
+                    <i class="bi bi-arrow-right"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="song-side__playlist--carousel album">
+              </div>
+            </div>
+            
+        </div>
+        <div class="song-side__container">
+          <div class="song-side__container--slider">
+            <div class="swiper swiper__banner">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <img src="https://sun9-west.userapi.com/sun9-64/s/v1/ig2/dVWFLET11BJ6sR3fiPzAXmTSaEoHXwkKzBSIABs8PBWKC5ad3IHbySkFm0S5zLAso2o-HULMX0LBnX6kjEjluunY.jpg?size=736x736&quality=96&type=album" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://sun9-east.userapi.com/sun9-24/s/v1/ig2/B0ZFyBhRZy1VT1KDqHm6UvrqCnyB9fzItkjZ_fWIJHi_Wcee8rnbV98nvoqS6SNcYADlil3qHbkjSawsj5AL2Lck.jpg?size=735x720&quality=96&type=album" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://sun9-west.userapi.com/sun9-45/s/v1/ig2/qsAxPlQPIaasw5RY05ZT278aF2Kf76dE_cV2HOkiS6oE-f4atekIct-PU4VDXFzxEWLel23ex0uIssFz8uLpT6M2.jpg?size=735x408&quality=96&type=album" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img src="https://sun9-north.userapi.com/sun9-85/s/v1/ig2/j7E2wi4-h5RWZ1k3zFL-QtMh1u-Xk6MB5y_u6V_2xOentIB6tAHk2Vc8Hw1WSqnVtVoFMihS96JNjRnPbCh9ISU4.jpg?size=679x1200&quality=96&type=album" alt="">
+                </div>
+              </div>
+              <!-- If we need pagination -->
+              <div class="swiper-pagination"></div>
+            
+              <!-- If we need navigation buttons -->
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
+            
+              <!-- If we need scrollbar -->
+              <div class="swiper-scrollbar"></div>
+            </div>
+          </div>
+         
+    </header>
+    <div class="music-play">
+      <div class="music-play__left">
+        <div class="music-play__wave hide-on-mobile-tablet">
+          <div class="music-play__wave-item"></div>
+          <div class="music-play__wave-item"></div>
+          <div class="music-play__wave-item"></div>
+        </div>
+        <div class="music-play__image">
+          <img style="width: 45px; height: 45px; border-radius: 80px;" src="https://sun9-west.userapi.com/sun9-3/s/v1/ig2/VCd_GE25CXCQtvxxJF4yfCsVCZk2f6_fAzVFfV_71m7H403J6_4IbZFiAFzaTvrme5fvFof36a-dg1YeJadpejMg.jpg?size=1200x1146&quality=95&type=album"/>
+         
+        </div>
+        <div class="music-play__info">
+          <marquee class="song-item--title" direction="left">
+            DISAS
+          </marquee>
+          <div class="song-item--singer">丁仦从丹⠀丁口丌</div>
+        </div>
+      </div>
+      <div class="music-play__center">
+        <div class="music-play__control">
+          <div class="btn btn-repeat hide-on-mobile">
+            <i class="bi bi-arrow-repeat"></i>
+          </div>
+          <div class="btn btn-prev">
+            <i class="bi bi-skip-backward"></i>
+          </div>
+          <div class="btn btn-toggle-play">
+            <i class="bi bi-play-circle"></i>
+          </div>
+          <div class="btn btn-next">
+            <i class="bi bi-skip-forward"></i>
+          </div>
+          <div class="btn btn-random hide-on-mobile">
+            <i class="bi bi-shuffle"></i>
+          </div>
+        </div>
+        <div class="music-play__progress">
+          <span class="music-play__progress--start">00:00</span>
+          <div class="music-play__progress--seek">
+            <input
+              id="progress"
+              class="progress"
+              type="range"
+              value="0"
+              step="1"
+              min="0"
+              max="100"
+            />
+            <div class="seek__bar"></div>
+            <div class="seek__dot"></div>
+          </div>
+          <span class="music-play__progress--end">04:00</span>
+          <audio id="audio" src="" preload="metadata"></audio>
+        </div>
+      </div>
+      <div class="music-play__right hide-on-mobile-tablet">
+        <div class="music-play__volume">
+          <i class="bi bi-volume-down"></i>
+          <input
+            id="volume"
+            class="volume"
+            type="range"
+            value="30"
+            step="1"
+            min="0"
+            max="100"
+          />
+          <div class="seek__bar"></div>
+          <div class="seek__dot"></div>
+        </div>
+      </div>
+    </div>
+  
+   
+    <script src="./themes.js"></script>
+    <script src="./app.js"></script>
+    <script src="./modal.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./modal2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="./modal3.js"></script>
+    <script src="./modal-window-destroy-concept/dist/script.js"></script>
+  </body>
+</html>
